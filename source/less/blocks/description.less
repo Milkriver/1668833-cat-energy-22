@@ -1,0 +1,36 @@
+.description {
+  width: 320px;
+}
+
+.description__wrapper {
+  padding: 0 21px 0 20px;
+}
+
+.description__title {
+  font-size: 36px;
+  font-weight: normal;
+  line-height: 40px;
+  color: @black;
+}
+
+.description__item-list {
+  padding: 0;
+}
+
+.description__item {
+  font-family: @secondary-font;
+  line-height: 18px;
+  color: @special-darkgrey;
+  list-style: none;
+  display: flex;
+  padding-bottom: 20px;
+
+  &::before {
+    content: "";
+    display: table;
+    width: 60px;
+    height: 60px;
+    background: @basic-green;
+    margin-right: 20px;
+  }
+}
