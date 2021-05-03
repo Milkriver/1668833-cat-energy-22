@@ -8,10 +8,8 @@
 }
 
 .examples__title {
-  font-family: @main-font;
-  font-style: normal;
-  font-weight: normal;
   font-size: 36px;
+  font-weight: normal;
   line-height: 40px;
   color: @black;
   padding-top: 27px;
@@ -20,9 +18,6 @@
 
 .examples__text {
   font-family: @secondary-font;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
   line-height: 18px;
   color: @special-darkgrey;
   padding-top: 33px;
@@ -36,10 +31,11 @@
 }
 
 .examples__stats-item {
-  background-image: url("../img/examples-weight-back.png");
-  background-repeat: no-repeat;
   width: 124px;
   height: 56px;
+  border: 2px solid @special-grey2;
+  border-radius: 3px;
+  box-sizing: border-box;
 
   &:first-child {
     margin-right: 31px;
@@ -47,9 +43,6 @@
 }
 
 .examples__stats-number {
-  font-family: @main-font;
-  font-style: normal;
-  font-weight: normal;
   font-size: 24px;
   line-height: 24px;
   text-align: center;
@@ -59,19 +52,15 @@
 
 .examples__stats-description {
   font-family: @secondary-font;
-  font-style: normal;
-  font-weight: normal;
   font-size: 12px;
   line-height: 12px;
   color: @special-darkgrey;
   width: 77px;
   margin: 0 auto;
+  background-color: @special-grey4;
 }
 
 .examples__stats-item-money {
-  font-family: @main-font;
-  font-style: normal;
-  font-weight: normal;
   font-size: 14px;
   line-height: 20px;
   text-align: center;
@@ -95,9 +84,6 @@
 }
 
 .slider__text {
-  font-family: @main-font;
-  font-style: normal;
-  font-weight: normal;
   font-size: 16px;
   line-height: 20px;
   display: flex;
