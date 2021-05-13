@@ -3,43 +3,72 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Cat Energy</title>
   <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body class="page__body">
-  <header class="page-header">
-    <a class="page-header__logo">
-      <img class="page-header__logo-image" src="img/logo-mobile.svg" width="34" height="38" alt="Cat Energy">
-    </a>
-    <h1 class="visually-hidden">Cat Energy</h1>
-    <a class="page-header__logo">
-      <img class="page-header__logo-image" src="img/page-header-logo2mobile.svg" width="101" height="18"
-        alt="Cat Energy">
-    </a>
-    <nav class="main-nav">
-      <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
-      <div class="main-nav__wrapper">
+  <header class="page-header wrapper">
+    <div class="page-header__wrapper wrapper--additional">
+      <div class="page-header__site-nav">
+        <a class="page-header__logo page-header__logo-mobile logo">
+          <picture>
+            <source media="(min-width:@desktop-width)" srcset="img/logo-desktop.svg" height="60" width="202">
+            <source media="(min-width:@tablet-width)" srcset="img/logo-tablet.svg" height="52" width="174">
+            <img class="logo__logo-image" src="img/logo-mobile.svg" width="33" height="37" alt="Cat Energy">
+          </picture>
+        </a>
+        <h1 class="visually-hidden">Cat Energy</h1>
+        <a class="page-header__logo page-header__logo-text logo">
+          <svg width="101" height="18">
+            <use href="img/sprite.svg#logo-text"></use>
+          </svg>
+        </a>
+        <div class="page-header__button">
+          <button class="page-header__toggle page-header__toggle--open" aria-label="Открыть меню"></button>
+        </div>
+      </div>
+      <nav class="page-header__nav main-nav main-nav--closed main-nav--nojs wrapper">
         <ul class="main-nav__list site-list">
-          <li class="site-list__item site-list__item--active">
+          <li class="site-list__item site-list__item--mainpage site-list__item--active">
             <a>
               Главная
             </a>
           </li>
-          <li class="site-list__item">
+          <li class="site-list__item site-list__item--mainpage">
             <a href="catalog.html">
               Каталог продукции
             </a>
           </li>
-          <li class="site-list__item">
+          <li class="site-list__item site-list__item--mainpage">
             <a href="form.html">
               Подбор программы
             </a>
           </li>
         </ul>
-      </div>
+    </div>
     </nav>
   </header>
+  <script>
+    var main_nav = document.querySelector('.main-nav');
+    var main_nav_toggle = document.querySelector('.page-header__toggle');
+    main_nav.classList.remove('main-nav--nojs')
+    main_nav_toggle.addEventListener('click', function () {
+      if (main_nav.classList.contains('main-nav--closed')) {
+        main_nav.classList.remove('main-nav--closed');
+        main_nav.classList.add('main-nav--open');
+        main_nav_toggle.classList.remove('page-header__toggle--open');
+        main_nav_toggle.classList.add('page-header__toggle--closed');
+      } else {
+        main_nav.classList.add('main-nav--closed');
+        main_nav.classList.remove('main-nav--open');
+        main_nav_toggle.classList.remove('page-header__toggle--closed');
+        main_nav_toggle.classList.add('page-header__toggle--open');
+      }
+    });
+
+  </script>
   <main class="page-main">
     <section class="introduction">
       <div class="introduction__wrapper">
