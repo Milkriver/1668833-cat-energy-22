@@ -1,34 +1,86 @@
 .more {
-  max-width: 280px;
-  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 25px 20px 25px 21px;
+  border-top: 1px solid @special-grey;
+  border-bottom: 1px solid @special-grey;
+
+  @media (min-width: @tablet-width) {
+    padding: 52px 37px 38px 38px;
+    width: 247px;
+    margin-top: 141px;
+    border: 1px solid @special-grey;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 163px;
+  }
 }
 
-.more__show-text {
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 20px;
-  text-align: center;
-  text-transform: uppercase;
-  color: @special-darkgrey3;
+.more__img {
+  @media (min-width: @tablet-width) {
+    height: 60px;
+    width: 60px;
+  }
 }
 
 .more__text {
-  font-family: @secondary-font;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
   font-weight: normal;
+  margin-top: 23px;
+  margin-bottom: 8px;
+
+  @media (min-width: @tablet-width) {
+    text-align: center;
+    font-size: 22px;
+    line-height: 22px;
+    max-width: 150px;
+    margin-top: 49px;
+    margin-bottom: 23px;
+  }
+}
+
+.more__description {
   font-size: 12px;
   line-height: 16px;
-  text-align: center;
+  font-family: @secondary-font;
   color: @special-darkgrey;
+  margin: 0;
+  margin-bottom: 21px;
+
+  @media (min-width: @tablet-width) {
+    text-align: center;
+    font-size: 16px;
+    line-height: 18px;
+    max-width: 170px;
+  }
 }
 
 .more__button {
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 20px;
   display: flex;
   align-items: center;
-  text-align: center;
-  text-transform: uppercase;
+  justify-content: center;
   color: @special-darkgrey;
+  text-transform: uppercase;
+  text-decoration: none;
+  width: 100%;
+  height: 40px;
   background-color: @basic-grey;
+  margin-top: auto;
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    line-height: 0px;
+  }
+}
+
+.more__button:hover {
+  background-color: @special-grey;
+}
+
+.more__button:focus {
+  color: fade(@special-darkgrey, 30%);
 }

@@ -1,0 +1,32 @@
+.information {
+  border: none;
+  padding: 0 20px;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 70px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 569px;
+  }
+}
+
+.information__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  list-style: none;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.information__item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 13px;
+}
+
+.information__item:last-child {
+  margin-bottom: 0;
+}
