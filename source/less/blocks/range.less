@@ -1,14 +1,23 @@
 .range {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
+  position: relative;
+  padding-top: 20px;
+  padding-left: 37px;
+  width: 209px;
+
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 30px;
-  }
+    width: 570px;
+    margin: -4px 23px 67px 74px;
+    background-color: @basic-grey;
+   }
 }
 
 .range__input {
@@ -20,13 +29,14 @@
 }
 
 .range__input-input {
-  width: 105px;
+  width: 84px;
   height: 14px;
   background: @white;
   border: 1px solid @special-grey2;
   box-sizing: border-box;
   border-radius: 6px;
   appearance: none;
+  align-items: center;
   margin: 0;
   z-index: 2;
 
@@ -35,6 +45,7 @@
     height: 6px;
     border: none;
     background: @special-grey7;
+    margin: 14px 0;
   }
 }
 
@@ -50,9 +61,11 @@
   left: 0;
   border-radius: 6px;
   z-index: 3;
+  cursor: pointer;
+  border-style: none;
 
   @media (min-width: @tablet-width) {
-    margin-left: 197px;
+    margin-left: 199px;
     height: 34px;
     width: 34px;
     border-radius: 50%;
@@ -79,10 +92,10 @@
   }
 }
 
-.range__label--before {
-  padding-right: 10px;
-}
+// .range__label--before {
+//   padding-left: 13px;
+// }
 
-.range__label--after {
-  padding-left: 10px;
-}
+// .range__label--after {
+//   padding-left: 10px;
+// }

@@ -1,10 +1,10 @@
 .proposal {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
+  row-gap: 13px;
   height: 289px;
-  margin-top: 39px;
   margin-bottom: 35px;
   margin-right: 20px;
   width: 100%;
@@ -34,7 +34,7 @@
     padding: 0;
     margin: 0;
     margin-right: 110px;
-    height: auto;
+    height: 289px;
     background-image: url("../img/proposal-bg-desktop.jpg");
 
     @media (min-resolution: 2dppx) {
@@ -45,7 +45,10 @@
 
 .proposal__img {
   width: 80px;
-  height: auto;
+  height: 83px;
+  background-image: url("../img/proposal-icon.svg");
+  background-repeat: no-repeat;
+  background-position-y: 16px;
 
   @media (min-width: @tablet-width) {
     margin-left: 78px;
@@ -53,7 +56,7 @@
 
   @media (min-width: 1440px) {
     margin: 0;
-    margin-bottom: 46px;
+    margin-bottom: 40px;
   }
 }
 
@@ -65,10 +68,12 @@
   line-height: 20px;
   font-family: @secondary-font;
   color: @white;
+  padding-top: 14px;
+  justify-self: flex-end;
 
   @media (min-width: @tablet-width) {
     text-align: start;
-    max-width: 145px;
+    max-width: 150px;
     margin-right: 124px;
   }
 

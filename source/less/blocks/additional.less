@@ -17,7 +17,7 @@
   font-size: 24px;
   line-height: 26px;
   margin: 0;
-  margin-bottom: 34px;
+  margin-bottom: 35px;
   width: 163px;
   font-weight: normal;
 
@@ -76,7 +76,7 @@
 }
 
 .additional__item {
-  margin-bottom: 13px;
+  margin-bottom: 25px;
   width: 100%;
 
   @media (min-width: @tablet-width) {
@@ -97,14 +97,6 @@
 .additional__label {
   position: relative;
   margin-left: 16px;
-
-  @media (min-width: @tablet-width) {
-    &::before {
-      width: 40px;
-      height: 40px;
-      left: -50px;
-    }
-  }
 }
 
 
@@ -118,6 +110,14 @@
   height: 30px;
   border: 1px solid @special-grey2;
   box-sizing: border-box;
+  cursor: pointer;
+
+
+  @media (min-width: @tablet-width) {
+    width: 40px;
+    height: 40px;
+    left: -50px;
+  }
 }
 
 .additional__label:hover {
@@ -139,6 +139,7 @@
   height: 30px;
   background-image: url("../img/positive-checkbox.svg");
   background-repeat: no-repeat;
+  cursor: pointer;
 
   @media (min-width: @tablet-width) {
     top: 7px;

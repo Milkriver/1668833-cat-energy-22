@@ -23,9 +23,9 @@
   justify-content: start;
   align-items: center;
   background: @basic-grey;
-  padding: 22px 20px 18px 25px;
+  padding: 22px 20px 18px 21px;
   max-height: 266px;
-  margin-bottom: 20px;
+  margin-bottom: 17px;
 
   @media (min-width: @tablet-width) {
     flex-direction: column;
@@ -68,7 +68,8 @@
 .programs__image--slim {
   @media (min-width: @tablet-width) {
     width: 200px;
-    height: 211px;
+    height: 221px;
+    margin-top: 10px;
   }
 
   @media (min-width: @desktop-width) {
@@ -79,12 +80,14 @@
 
 .programs__image--pro {
   margin-top: 7px;
-  margin-left: -7px;
-  margin-right: 11px;
+  margin-left: -13px;
 
   @media (min-width: @tablet-width) {
     width: 268px;
-    height: 200px;
+    height: 241px;
+    margin-top: 4px;
+    margin-left: 25px;
+    margin-right: 11px;
   }
 
   @media (min-width: @desktop-width) {
@@ -107,7 +110,14 @@
   @media (min-width: @tablet-width) {
     font-size: 36px;
     line-height: 36px;
-    margin-bottom: 35px;
+    margin-bottom: 7px;
+    margin-top: 10px;
+  }
+}
+
+.programs__header-text--pro {
+  @media (min-width: @tablet-width) {
+    margin-bottom: 7px;
   }
 }
 
@@ -118,18 +128,20 @@
   line-height: 18px;
   max-width: 240px;
   border-bottom: 1px solid @special-grey3;
-  margin: 0;
   margin-top: 22px;
   margin-bottom: 19px;
   padding-bottom: 23px;
+  padding-left: -2px;
   color: @black;
 
   @media (min-width: @tablet-width) {
     font-size: 16px;
     line-height: 24px;
+    font-style: normal;
+    font-weight: normal;
     border: none;
-    margin-bottom: 48px;
-    max-width: 350px;
+    margin-bottom: 53px;
+    max-width: 340px;
     padding: 0;
   }
 
@@ -160,10 +172,15 @@
     position: absolute;
     background-image: url("../img/programs-arrow.svg");
     background-repeat: no-repeat;
-    width: 24px;
+    width: 26px;
     height: 12px;
-    top: 2px;
-    right: -38px;
+    top: 30px;
+    right: -41px;
+  }
+
+  &:hover::before {
+    width: 100%;
+    right: -100px;
   }
 
   &:focus {
@@ -178,6 +195,10 @@
     &::before {
       top: 12px;
       left: 135px;
+    }
+
+    &:hover::before {
+      left: 137px;
     }
   }
 }

@@ -2,17 +2,21 @@
 <html class="page" lang="ru">
 
 <head>
+  <link rel="preload" href="css/style.min.css" as="style">
+  <link rel="preload" href="js/script.min.js" as="script">
+  <link rel="preload" href="fonts/oswaldmedium.woff2" as="font">
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Подбор программы</title>
   <link rel="icon" href="favicon.ico">
-  <link href="css/style.css" rel="stylesheet">
+  <link href="css/style.min.css" rel="stylesheet">
 </head>
 
 <body class="page__body">
   <header class="page-header wrapper">
-    <div class="page-header__wrapper wrapper--additional">
+    <div class="page-header__wrapper wrapper-additional">
       <div class="page-header__site-nav">
-        <a class="page-header__logo page-header__logo-mobile logo">
+        <a href="index.html" class="page-header__logo page-header__logo-mobile logo">
           <picture>
             <source media="(min-width: 1440px)" srcset="img/logo-desktop.svg" height="60" width="202">
             <source media="(min-width: 768px)" srcset="img/logo-tablet.svg" height="52" width="174">
@@ -20,13 +24,14 @@
           </picture>
         </a>
         <h1 class="visually-hidden">Cat Energy</h1>
-        <a class="page-header__logo page-header__logo-text logo">
+        <a href="index.html" class="page-header__logo page-header__logo-text logo">
           <svg width="101" height="18">
             <use href="img/sprite.svg#logo-text"></use>
           </svg>
         </a>
         <div class="page-header__button">
-          <button class="page-header__toggle page-header__toggle--open" aria-label="Открыть меню"></button>
+          <button class="page-header__toggle page-header__toggle--open" type="button"
+            aria-label="Открыть меню"></button>
         </div>
       </div>
       <nav class="page-header__nav main-nav main-nav--closed main-nav--nojs wrapper">
@@ -50,30 +55,12 @@
     </div>
     </nav>
   </header>
-  <script>
-    var main_nav = document.querySelector('.main-nav');
-    var main_nav_toggle = document.querySelector('.page-header__toggle');
-    main_nav.classList.remove('main-nav--nojs')
-    main_nav_toggle.addEventListener('click', function () {
-      if (main_nav.classList.contains('main-nav--closed')) {
-        main_nav.classList.remove('main-nav--closed');
-        main_nav.classList.add('main-nav--open');
-        main_nav_toggle.classList.remove('page-header__toggle--open');
-        main_nav_toggle.classList.add('page-header__toggle--closed');
-      } else {
-        main_nav.classList.add('main-nav--closed');
-        main_nav.classList.remove('main-nav--open');
-        main_nav_toggle.classList.remove('page-header__toggle--closed');
-        main_nav_toggle.classList.add('page-header__toggle--open');
-      }
-    });
-  </script>
-  <main class="page-main wrapper">
+  <main class="page-main wrapper form">
     <h2 class="page-main__title form__title">Подбор программы</h2>
     <p class="form__text">Заполните анкету, и мы подберем программу питания для вашего кота</p>
     <section class="form__info-cat info-cat">
       <form class="info-cat__field" action="https://echo.htmlacademy.ru" method="post">
-        <fieldset class="info-cat__fieldset information  wrapper--form">
+        <fieldset class="info-cat__fieldset information  wrapper-form">
           <h2 class="visually-hidden">О коте</h2>
           <ul class="information__list">
             <li class="information__item">
@@ -116,7 +103,7 @@
         <fieldset class="info-cat__fieldset form-host wrapper">
           <hr class="form-host-hr form-host-hr--before">
           <h2>Контактные данные (владельца кота)</h2>
-          <hr class="form-host-hr form__host-hr--after">
+          <hr class="form-host-hr form-host-hr--after">
           <ul class="form-host__list">
             <li class="form-host__item form-host__item--email">
               <label class="form-host__label info-cat__text" for="input-email">E-mail:*</label>
@@ -141,7 +128,7 @@
           <h2>Комментарий</h2>
           <hr class="comment__hr comment__hr--after">
           <textarea class="comment__textarea info-cat__form" name="comment" id="comment__textarea" cols="30" rows="10"
-            placeholder="Расскажите обо всех повАдках кота"></textarea>
+            placeholder="Расскажите обо всех повадках кота"></textarea>
         </fieldset>
         <fieldset class="info-cat__fieldset additional wrapper">
           <hr class="additional__hr additional__hr--before">
@@ -172,7 +159,7 @@
     </section>
     <div class="contacts wrapper">
       <div class="contacts__info contacts__info--index">
-        <div class="contacts__title">приглашаем к сотрудничеству дилеров!</div>
+        <div class="contacts__title">приглашаем <br>к сотрудничеству дилеров!</div>
         <p class="contacts__text">ул. Большая Конюшенная, д. 19/8 <span>Санкт-Петербург</span></p>
       </div>
       <div class="contacts__map wrapper">
@@ -182,8 +169,8 @@
       </div>
     </div>
   </main>
-  <footer class="page-footer wrapper--additional">
-    <a href="#" class="logo page-footer__logo">
+  <footer class="page-footer wrapper-additional">
+    <a href="index.html" class="logo page-footer__logo">
       <svg class="logo-text" height="24" width="128">
         <use href="img/sprite.svg#logo-text"></use>
       </svg>
@@ -222,6 +209,7 @@
       </a>
     </div>
   </footer>
+  <script src="../js/script.min.js"></script>
 </body>
 
 </html>
