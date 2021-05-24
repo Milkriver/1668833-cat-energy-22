@@ -8,3 +8,19 @@
 .page__body {
   margin: 0 auto;
 }
+
+.page-wrapper{
+  width: 320px;
+  margin: 0 auto;
+
+
+  @media (min-width: @tablet-width) {
+    width: 768px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 100vw;
+    margin: 0;
+  }
+}

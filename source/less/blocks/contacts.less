@@ -3,6 +3,23 @@
   margin: 0;
 }
 
+.contacts__wrapper {
+  width: 320px;
+  margin: 0 auto;
+  margin-top: 2px;
+
+
+  @media (min-width: @tablet-width) {
+    width: 768px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 100vw;
+    margin: 0;
+  }
+}
+
 .contacts__info {
   display: flex;
   flex-direction: row;
@@ -10,8 +27,9 @@
   align-items: center;
   min-height: 114px;
   padding: 0;
-  width: 382px;
-  margin-left: 20px;
+  width: 100%;
+  padding-left: 20px;
+  box-sizing: border-box;
 
   @media (min-width: @tablet-width) {
     justify-content: space-between;
