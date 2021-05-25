@@ -8,6 +8,7 @@
 
   @media (min-width: @tablet-width) {
     padding-left: 0;
+    padding-top: 74px;
   }
 
   @media (min-width: @desktop-width) {
@@ -41,7 +42,7 @@
   height: 2px;
   background-color: @basic-green;
   border: none;
-  margin-top: 16px;
+  margin-top: 20px;
 }
 
 .additional-product__hr--before {
@@ -64,8 +65,7 @@
   margin-right: 20px;
 
   @media (min-width: @tablet-width) {
-    margin-left: 30px;
-    margin-right: 30px;
+    margin: 0 30px 0 30px;
   }
 
   @media (min-width: @desktop-width) {
@@ -87,7 +87,13 @@
   padding-right: 20px;
   height: 516px;
   margin-top: -3px;
-  margin-bottom: 44px;
+  margin-bottom: 38px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 105px;
+    box-sizing: border-box;
+    padding: 0;
+  }
 
   @media (min-width: @desktop-width) {
     width: 896px;
@@ -100,14 +106,14 @@
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
-  padding-top: 13px;
-  padding-bottom: 19px;
+  padding-top: 10px;
+  padding-bottom: 16px;
   border-top: 1px solid @special-grey;
   border-bottom: 1px solid @special-grey;
 
   @media (min-width: @tablet-width) {
     flex-wrap: wrap;
-    padding: 26px 38px 28px 38px;
+    padding: 27px 38px 28px 38px;
     border: 1px solid @special-grey;
   }
 
@@ -124,15 +130,17 @@
   color: @special-darkgrey2;
   font-family: @main-font;
   font-weight: normal;
-  margin: -2px 0 0 2px;
+  margin: 0;
   font-size: 16px;
   line-height: 16px;
   width: 100%;
+  margin-bottom: 18px;
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 20px;
     max-width: 50%;
+    margin: 0;
   }
 
   @media (min-width: @desktop-width) {
@@ -142,12 +150,13 @@
 
 .additional-product__structure {
   width: 100%;
-  margin-top: 10px;
 
   @media (min-width: @tablet-width) {
     margin-top: 0;
     margin-left: auto;
-    width: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
   }
 
   @media (min-width: @desktop-width) {
@@ -161,14 +170,26 @@
   font-size: 14px;
   line-height: 14px;
   font-family: @secondary-font;
-}
+  display: flex;
+  justify-content: space-between;
 
-.additional-product__item td:nth-child(2) {
-  text-align: right;
+  @media (min-width: @tablet-width) {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 20px;
+    margin-top: 1px;
+  }
 }
 
 .additional-product__price-content {
-  margin-right: -5px;
+  margin-right: -1px;
+  margin-left: 48px;
+
+  @media (min-width: @tablet-width) {
+    width: 44px;
+    text-align: end;
+  }
 }
 
 .additional-product__button {
@@ -183,11 +204,12 @@
   font-weight: normal;
   font-size: 16px;
   line-height: 20px;
-  height: 40px;
-  margin-top: 13px;
+  height: 38px;
+  margin-top: 12px;
+  margin-bottom: 3px;
 
   @media (min-width: @tablet-width) {
-    margin-top: 28px;
+    margin-top: 20px;
   }
 
   @media (min-width: @desktop-width) {
