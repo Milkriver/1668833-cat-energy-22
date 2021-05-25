@@ -50,7 +50,11 @@
   height: 2px;
   background-color: @basic-green;
   border: none;
-  margin-top: 18px;
+  margin-top: 16px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 20px;
+  }
 }
 
 .comment__textarea {
@@ -68,5 +72,6 @@
 
   @media (min-width: @desktop-width) {
     margin: 0 110px;
+    padding: 10px 19px;
   }
 }

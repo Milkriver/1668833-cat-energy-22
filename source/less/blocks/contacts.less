@@ -52,6 +52,12 @@
 
 .contacts__info--form {
   background-color: @basic-grey;
+
+  @media (min-width: 1440px) {
+    position: absolute;
+    top: 97px;
+    left: 105px;
+  }
 }
 
 .contacts__info--catalog {
@@ -155,5 +161,13 @@
       height: 400px;
       margin: 0 auto;
     }
+  }
+}
+
+.contacts__map-form {
+  @media (min-width: @desktop-width) {
+    height: 400px;
+    margin: 0 auto;
+    margin-top: 10px;
   }
 }
