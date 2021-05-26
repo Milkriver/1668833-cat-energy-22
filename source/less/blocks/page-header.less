@@ -1,9 +1,138 @@
 .page-header {
-  background-color: @white;
+  margin-top: 12px;
+
+  @media (min-width: @tablet-width) {
+    border: none;
+    margin-top: 22px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 53px;
+  }
+}
+
+.page-header__wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  position: relative;
+  z-index: 2;
+
+  @media (max-width: @mobile-width-only) {
+    padding: 0;
+    width: 320px;
+  }
+
+  @media (min-width: @tablet-width) {
+    align-items: center;
+  }
+
+  @media (min-width: @desktop-width) {
+    align-items: center;
+    padding-right: 110px;
+  }
+}
+
+.page-header__site-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: 1px solid @special-grey5;
   width: 280px;
-  // display: grid;
-  // grid-template-columns: 33% 33% 33%;
-  // text-align: center;
-  // align-items: center;
-  // padding: 11px 20px 18px;
+  padding: 5px 0 11px 0;
+
+  @media (min-width: @tablet-width) {
+    border: none;
+    padding: 0;
+    width: auto;
+  }
+}
+
+.page-header__nav {
+  width: 320px;
+  margin: 0 auto;
+
+
+  @media (min-width: @tablet-width) {
+    width: 768px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 100%;
+    margin: 0;
+    margin-left: 10px;
+  }
+}
+
+.page-header__logo {
+  display: block;
+}
+
+.page-header__logo-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: -6px;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.page-header__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.page-header__toggle {
+  cursor: pointer;
+  position: relative;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  padding: 0;
+  height: 18px;
+  width: 24px;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.page-header__toggle--open {
+  &::before {
+    content: "";
+    position: absolute;
+    width: 24px;
+    height: 1.5px;
+    top: 0;
+    left: 0;
+    background-color: @black;
+    box-shadow: 0 8px 0 0 @black, 0 16px 0 0 @black;
+  }
+}
+
+.page-header__toggle--closed {
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    width: 23px;
+    height: 1.5px;
+    background-color: @black;
+    margin-left: 5px;
+    margin-top: -3px;
+  }
+
+  &::before {
+    transform: translateX(-50%) rotate(45deg);
+    box-shadow: none;
+  }
+
+  &::after {
+    transform: translateX(-50%) rotate(-45deg);
+  }
 }
