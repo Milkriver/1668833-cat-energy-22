@@ -79,10 +79,8 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding: 0 110px;
-    justify-content: space-between;
     box-sizing: border-box;
-    width: 1220px;
+    padding-left: 113px;
   }
 }
 
@@ -98,6 +96,7 @@
   @media (min-width: @desktop-width) {
     margin-bottom: 42px;
     width: fit-content;
+    padding-right: 158px;
   }
 }
 
@@ -106,10 +105,31 @@
 }
 
 .additional__label {
+  text-transform: uppercase;
+  color: @special-darkgrey;
+  margin-right: 16px;
+  white-space: nowrap;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 18px;
   position: relative;
   margin-left: 16px;
-}
 
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+    margin-right: 22px;
+    margin-top: -6px;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 20px;
+    line-height: 30px;
+    margin-right: 22px;
+    margin-top: -6px;
+  }
+}
 
 .additional__label::before {
   content: "";
@@ -129,6 +149,10 @@
     height: 40px;
     left: -57px;
   }
+
+  @media (min-width: @desktop-width) {
+    left: -60px;
+  }
 }
 
 .additional__label:hover {
@@ -137,11 +161,11 @@
   }
 }
 
-.additional__input:disabled + label {
+.additional__input:disabled+label {
   opacity: 0.3;
 }
 
-.additional__input:checked + label::after {
+.additional__input:checked+label::after {
   content: "";
   position: absolute;
   top: 5px;
@@ -155,5 +179,17 @@
   @media (min-width: @tablet-width) {
     top: 7px;
     left: -47px;
+  }
+}
+
+.additional__label--no-sugar {
+  @media (min-width: @desktop-width) {
+    margin-right: -9px;
+  }
+}
+
+.additional__label--vitamins {
+  @media (min-width: @desktop-width) {
+    right: -62px;
   }
 }
